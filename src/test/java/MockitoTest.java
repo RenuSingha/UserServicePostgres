@@ -1,4 +1,3 @@
-import java8.StreamAPI;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -11,9 +10,6 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MockitoTest {
-
-    @Mock
-    StreamAPI streamAPI;
 
     @Mock
     List<String> mockedlist;
@@ -42,16 +38,5 @@ public class MockitoTest {
 
         Mockito.when(mockedlist.size()).thenReturn(100);
         assertEquals(100, mockedlist.size());
-    }
-
-    @Test
-    public void getCountEmptyStrings() {
-        //assertEquals(4, streamAPI.getCountEmptyStrings(asList(new String[]{"Renu", "", "Saana", "", "VJ", "", ""})));
-        getCountEmptyStrings();
-        Mockito.verify(false);
-        Mockito.when(streamAPI).getMock();
-        assertEquals(3, streamAPI);
-        //return String.valueOf(streamAPI);
-
     }
 }
